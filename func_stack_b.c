@@ -1,5 +1,5 @@
 #include "monty.h"
-
+stack_t *head = NULL;
 
 /**
   * stack_count - Counts the number of elements in the stack
