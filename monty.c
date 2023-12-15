@@ -2,7 +2,7 @@
 
 #define MAX_LINE_LENGTH 1024
 
-int main(int argn, char *args[]) 
+int main(int argn, char *args[])
 {
 FILE *fd = NULL;
 size_t line_len = MAX_LINE_LENGTH;
@@ -13,34 +13,27 @@ char *filename = NULL, *op_code = NULL, *op_param = NULL, *buff = NULL;
 filename = args[1];
 check_args_num(argn);
 fd = open_file(filename);
-
 buff = (char *)malloc(line_len);
-if (buff == NULL) 
+if (buff == NULL)
 {
 perror("Error allocating memory");
 fclose(fd);
-return EXIT_FAILURE;
+return (EXIT_FAILURE_);
 }
-
-while (fgets(buff, line_len, fd) != NULL) 
+while (fgets(buff, line_len, fd) != NULL)
 {
-
-if (buff[strlen(buff) - 1] == '\n') 
-{
+if (buff[strlen(buff) - 1] == '\n')
 buff[strlen(buff) - 1] = '\0';
-}
-
 op_code = strtok(buff, "\t\n ");
-if (op_code) {
+if (op_code)
+{
 if (op_code[0] == '#') 
 {
 ++line_num;
 continue;
 }
-
 op_param = strtok(NULL, "\t\n ");
 op_status = handle_execution(op_code, op_param, line_num, op_status);
-
 if (op_status >= 100 && op_status < 300)
 {
 fclose(fd);
@@ -49,12 +42,10 @@ free(buff);
 return EXIT_FAILURE;
 }
 }
-
 ++line_num;
 }
-
 frees_stack();
 free(buff);
 fclose(fd);
-return EXIT_SUCCESS;
+return (EXIT_SUCCESS);
 }
