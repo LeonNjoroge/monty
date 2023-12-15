@@ -97,5 +97,6 @@ void handle_more_uerror(int errno, unsigned int line);
 void (*func_pick(char *s))(stack_t **, unsigned int);
 void rotate_l_op(stack_t **stack, unsigned int line_number);
 void rotate_r_op(stack_t **stack, unsigned int line_number);
+void processFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status);
 
 #endif
