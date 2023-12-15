@@ -6,11 +6,11 @@
  * @line_len: Maximum length of a line in the file
  * @line_num: Pointer to the current line number being processed
  * @op_status: Pointer to the current operation status
- * @return: None
  */
 
 void pFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status)
 {
+
 char *buff = (char *)malloc(line_len);
 
 if (buff == NULL)
@@ -57,7 +57,7 @@ free(buff);
  * @argn: The number of command line arguments
  * @args: An array of strings representing the command line arguments
  *
- * @return: EXIT_SUCCESS on successful execution, EXIT_FAILURE on failure.
+ * Return: EXIT_SUCCESS on successful execution, EXIT_FAILURE on failure.
  */
 
 int main(int argn, char *args[])
