@@ -10,7 +10,7 @@
 
 void pFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status)
 {
-
+char *op_codem, *op_param;
 char *buff = (char *)malloc(line_len);
 
 if (buff == NULL)
@@ -27,7 +27,7 @@ if (buff[strlen(buff) - 1] == '\n')
 buff[strlen(buff) - 1] = '\0';
 }
 
-char *op_code = strtok(buff, "\t\n ");
+*op_code = strtok(buff, "\t\n ");
 if (op_code)
 {
 if (op_code[0] == '#')
@@ -35,7 +35,7 @@ if (op_code[0] == '#')
 ++(*line_num);
 continue;
 }
-char *op_param = strtok(NULL, "\t\n ");
+*op_param = strtok(NULL, "\t\n ");
 *op_status = handle_execution(op_code, op_param, *line_num, *op_status);
 
 if (*op_status >= 100 && *op_status < 300)

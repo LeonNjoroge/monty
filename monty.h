@@ -1,6 +1,7 @@
 #ifndef _MONTY_
 #define _MONTY_
 
+#define MAX_LINE_LENGTH 1024
 /* Constants */
 #define SUCSS_OP		0
 #define VALID_PARM		0
@@ -27,6 +28,7 @@
 #define ERR_MOD_USG		210
 #define ERR_PCH_USG		211
 #define ERR_PCH_EMP		212
+
 
 #include <ctype.h>
 #include <fcntl.h>
@@ -97,6 +99,6 @@ void handle_more_uerror(int errno, unsigned int line);
 void (*func_pick(char *s))(stack_t **, unsigned int);
 void rotate_l_op(stack_t **stack, unsigned int line_number);
 void rotate_r_op(stack_t **stack, unsigned int line_number);
-void processFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status);
+void pFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status);
 
 #endif
