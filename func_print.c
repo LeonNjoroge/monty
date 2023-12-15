@@ -78,11 +78,8 @@ void pri_int_op(stack_t **stack, unsigned int line_number)
 
 void pri_str_op(stack_t **stack, unsigned int line_number)
 {
+	stack_t *curr = *stack;
 	(void) line_number;
-	stack_t *curr;
-
-	*curr = *stack;
-
 
 	while (curr != NULL)
 	{

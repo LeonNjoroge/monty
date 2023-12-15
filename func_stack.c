@@ -169,9 +169,9 @@ void rotate_l_op(stack_t **stack, unsigned int line_number)
 
 void rotate_r_op(stack_t **stack, unsigned int line_number)
 {
-	(void) line_number;
-
 	stack_t *final = NULL;
+
+	(void) line_number;
 
 	if (*stack && (*stack)->next)
 	{
