@@ -1,5 +1,14 @@
 #include "monty.h"
 
+/**
+ * pFile - Processes a file, executing operations from Monty bytecode
+ * @fd: File pointer to the opened Monty bytecode file
+ * @line_len: Maximum length of a line in the file
+ * @line_num: Pointer to the current line number being processed
+ * @op_status: Pointer to the current operation status
+ * @return: None
+ */
+
 void pFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status)
 {
 char *buff = (char *)malloc(line_len);
@@ -42,6 +51,14 @@ exit(EXIT_FAILURE);
 
 free(buff);
 }
+
+/**
+ * main - The entry point for the Monty Interpreter
+ * @argn: The number of command line arguments
+ * @args: An array of strings representing the command line arguments
+ *
+ * @return: EXIT_SUCCESS on successful execution, EXIT_FAILURE on failure.
+ */
 
 int main(int argn, char *args[])
 {
