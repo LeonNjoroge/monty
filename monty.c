@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void processFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status)
+void pFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status)
 {
 char *buff = (char *)malloc(line_len);
 
@@ -26,7 +26,6 @@ if (op_code[0] == '#')
 ++(*line_num);
 continue;
 }
-
 char *op_param = strtok(NULL, "\t\n ");
 *op_status = handle_execution(op_code, op_param, *line_num, *op_status);
 
@@ -38,7 +37,6 @@ free(buff);
 exit(EXIT_FAILURE);
 }
 }
-
 ++(*line_num);
 }
 
@@ -57,9 +55,9 @@ filename = args[1];
 check_args_num(argn);
 fd = open_file(filename);
 
-processFile(fd, line_len, &line_num, &op_status);
+pFile(fd, line_len, &line_num, &op_status);
 
 frees_stack();
 fclose(fd);
-return EXIT_SUCCESS;
+return (EXIT_SUCCESS);
 }
