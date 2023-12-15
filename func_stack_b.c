@@ -25,9 +25,7 @@ unsigned int stack_count(stack_t *stack)
 /**
  * swap_op - Swaps the top two elements of stack
  * @stack: The head of the stack
- * 
  * @line_number: The line on which the error occurred
- *
  * Return: None
  */
 
