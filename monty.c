@@ -10,7 +10,7 @@
 
 void pFile(FILE *fd, size_t line_len, unsigned int *line_num, int *op_status)
 {
-char *op_codem, *op_param;
+char *op_code, *op_param;
 char *buff = (char *)malloc(line_len);
 
 if (buff == NULL)
