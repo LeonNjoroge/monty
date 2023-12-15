@@ -163,7 +163,6 @@ void rotate_l_op(stack_t **stack, unsigned int line_number)
 /**
   * rotate_r_op - rotates the stack to bottom
   * @stack: The head of the stack
-  * 
   * @line_number: The line on which has the error
   * Return: None
   */
