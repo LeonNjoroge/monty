@@ -77,7 +77,7 @@ void multi_op(stack_t **stack, unsigned int line_number)
 
 	size = stack_count(*stack);
 	if (size < 2)
-		handle_error(ERR__USti_opG, NULL, line_number, NULL);
+		handle_error(ERR_MUL_USG, NULL, line_number, NULL);
 
 	m = tmp->n;
 	l = tmp->next->n;
