@@ -31,9 +31,9 @@ void add_op(stack_t **stack, unsigned int line_number)
 /**
  * subt_op - Subtracts top element
  * from the second top element of stack
- * 
+ *
  * @stack: The head of the stack
- * 
+ *
  * @line_number: The line on which has error
  * Return: None
  */

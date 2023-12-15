@@ -28,7 +28,7 @@ void (*func_pick(char *s))(stack_t **, unsigned int)
 		{ "div", div_op },
 		{ NULL, NULL }
 	};
- 
+
 	int m = 0;
 
 	while (insts[m].opcode)
