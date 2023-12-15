@@ -12,6 +12,7 @@ void push_op(stack_t **stack, unsigned int param)
 {
 
 	stack_t *node_oth = NULL;
+
 	node_oth = malloc(sizeof(stack_t));
 
 	if (node_oth == NULL)
@@ -99,7 +100,7 @@ void pop_op(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = NULL;
 	stack_t *curr = *stack;
- 
+
 	if (*stack == NULL)
 		handle_error(ERR_POP_USG, NULL, line_number, NULL);
 
