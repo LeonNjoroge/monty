@@ -9,8 +9,9 @@
 void pri_all_op(stack_t **stack, unsigned int line_number)
 {
 	(void) line_number;
-	stack_t *curr = NULL;
+	stack_t *curr;
 
+	*curr = NULL;
 
 	if (*stack)
 	{
@@ -80,7 +81,9 @@ void pri_int_op(stack_t **stack, unsigned int line_number)
 void pri_str_op(stack_t **stack, unsigned int line_number)
 {
 	(void) line_number;
-	stack_t *curr = *stack;
+	stack_t *curr;
+
+	*curr = *stack;
 
 
 	while (curr != NULL)

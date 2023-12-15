@@ -34,9 +34,7 @@ void swap_op(stack_t **stack, unsigned int line_number)
 	unsigned int size = 0;
 	unsigned int tmp = 0;
 
-	size = s;
-
-	ack_count(*stack);
+	size = stack_count(*stack);
 
 	if (size < 2)
 	{
