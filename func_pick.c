@@ -4,7 +4,7 @@
   * func_pick - Select the function relating to Monty instruction
   * @s: The instruction to be executed
   * Return: A pointer to the fun or
-  * NULL if the function don't exists
+  * NULL if the function don't exist
   */
 
 void (*func_pick(char *s))(stack_t **, unsigned int)
