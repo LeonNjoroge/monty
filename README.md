@@ -1,1 +1,1 @@
-Stacks, Queues - LIFO, FIFO
+LIFO and FIFO- Data structures and algorithms
