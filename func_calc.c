@@ -4,7 +4,7 @@
  * add_op - Adds the two top elements of the stack
  * @stack: The head of the stack
  * @line_number: The line on which the error
- * Return: Nothing
+ * Return: None
  */
 void add_op(stack_t **stack, unsigned int line_number)
 {
