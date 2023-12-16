@@ -4,7 +4,7 @@
   * check_args_num - Check the arguments passed on to the interpreter
   * @argn: Number of args
   *
-  * Return: Nothing
+  * Return: None
   */
 void check_args_num(int argn)
 {
